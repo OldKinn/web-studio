@@ -1,0 +1,19 @@
+.padding {
+    padding: 10px;
+}
+
+.padding-top {
+    padding-top: 10px;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.margin-right {
+    margin-right: 10px;
+}
+
+.margin-none {
+    margin: 0;
+}

@@ -1,0 +1,74 @@
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(50, 50, 50, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(50, 50, 50, 0.6);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(50, 50, 50, 0.1);
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: rgba(50, 50, 50, 0.2);
+}
+
+.frame-header {
+    height: 50px;
+    background-color: #25313e;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.frame-header .app-brand {
+    text-decoration: blink;
+}
+
+.frame-header .app-logo {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 9px;
+    left: 5px;
+}
+
+.frame-header .app-title {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-left: 46px;
+}
+
+.frame-menu {
+    width: 220px;
+    background-color: #41586E;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.frame-menu .menu-item {
+    height: 40px;
+    color: #FFF;
+    line-height: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.frame-content {
+    position: fixed;
+    left: 220px;
+    top: 50px;
+    bottom: 0;
+}
