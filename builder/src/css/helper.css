@@ -17,3 +17,10 @@
 .margin-none {
     margin: 0;
 }
+
+.text-truncate {
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

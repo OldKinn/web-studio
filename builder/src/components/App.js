@@ -9,12 +9,12 @@ import Content from './Content'
 class App extends Component {
 
     render() {
-        const {cache, children} = this.props;
+        const {actions, cache, children} = this.props;
         return (
             <div className="root-container">
                 <Header title="我的项目名称" logo="public/images/logo.png"/>
-                <Menu slide={cache.slide}/>
-                <Content>
+                <Menu slide={cache.slide} actions={actions} cache={cache}/>
+                <Content cache={cache}>
                     {React.cloneElement(children, {cache: cache})}
                 </Content>
             </div>

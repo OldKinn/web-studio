@@ -3,19 +3,25 @@ import set from 'lodash/set'
 import clone from 'lodash/clone'
 import * as Const from 'commons/const'
 
+const menus = [
+    {id: 'project', name: '项目管理', path: '/home', icon: 'test', notice: '1024'},
+    {id: 'attribute', name: '属性维护', path: '/home', icon: 'test', notice: '1024'},
+    {id: 'component', name: '组件维护', path: '/home', icon: 'test', notice: '1024'},
+    {id: 'common', name: '其他设置', path: '/home', icon: 'test', notice: '1024'}
+]
+
 // 页面展现的控制状态
 function cache(state = {
     // 菜单是否收缩
-    slide: false
+    collapse: false,
+    menus: menus
 }, action) {
-    switch (action.type) {
-        case Const.ACTION_SET_CACHE:
-            let next = clone(state);
-            set(next, action.key, action.value);
-            return next;
-        default:
-            return state;
+    if (action.type == Const.ACTION_SET_CACHE) {
+        let next = clone(state);
+        set(next, action.key, action.value);
+        return next;
     }
+    return state;
 }
 
 const rootReducer = combineReducers({
