@@ -13,6 +13,8 @@ const menus = [
 
 // 页面展现的控制状态
 function cache(state = {
+    // 窗口的高度
+    windowHeight: 0,
     // 菜单是否收缩
     collapse: false,
     menus: menus

@@ -8,6 +8,25 @@ import Content from './Content'
 
 class App extends Component {
 
+    constructor(props) {
+        super(props);
+        this.handleResize = this.handleResize.bind(this)
+    }
+
+    componentDidMount() {
+        this.handleResize();
+        window.addEventListener('resize', this.handleResize);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResize);
+    }
+
+    handleResize() {
+        const {actions} = this.props;
+        actions.setCache('windowHeight', window.innerHeight);
+    }
+
     render() {
         const {actions, cache, children} = this.props;
         return (
