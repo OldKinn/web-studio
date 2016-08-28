@@ -4,6 +4,7 @@
  */
 
 import React, {Component} from 'react'
+import {Scrollbars} from 'react-custom-scrollbars'
 import MenuItem from './MenuItem'
 
 class Menu extends Component {
@@ -18,6 +19,9 @@ class Menu extends Component {
         const createMenu = (item, index) => {
             return <MenuItem key={index} collapse={cache.collapse} {...item}/>
         };
+        const renderScrollbar = (props) => {
+            return <span {...props} className="hidden"/>
+        }
         let {width, btnClass} = {
             width: 220,
             btnClass: 'glyphicon glyphicon-menu-left'
@@ -28,23 +32,30 @@ class Menu extends Component {
         }
         return (
             <div className="frame-menu" style={{width}}>
-                <div className="menu-header">
-                    <button className="btn btn-sm">
-                        <i className="glyphicon glyphicon-cog"/>
-                    </button>
-                    <button className="btn btn-sm">
-                        <i className="glyphicon glyphicon-star"/>
-                    </button>
-                    <button className="btn btn-sm">
-                        <i className="glyphicon glyphicon-star"/>
-                    </button>
-                    <button className="btn btn-sm">
-                        <i className="glyphicon glyphicon-star"/>
-                    </button>
-                </div>
-                <div className="menu-content">
-                    {cache.menus.map(createMenu)}
-                </div>
+                <Scrollbars
+                    autoHide={true}
+                    autoHideTimeout={800}
+                    autoHideDuration={200}
+                    renderTrackHorizontal={renderScrollbar}
+                >
+                    <div className="menu-header">
+                        <button className="btn btn-sm">
+                            <i className="glyphicon glyphicon-cog"/>
+                        </button>
+                        <button className="btn btn-sm">
+                            <i className="glyphicon glyphicon-star"/>
+                        </button>
+                        <button className="btn btn-sm">
+                            <i className="glyphicon glyphicon-star"/>
+                        </button>
+                        <button className="btn btn-sm">
+                            <i className="glyphicon glyphicon-star"/>
+                        </button>
+                    </div>
+                    <div className="menu-content">
+                        {cache.menus.map(createMenu)}
+                    </div>
+                </Scrollbars>
                 <div className="menu-footer">
                     <button className="btn btn-sm pull-right" onClick={this.handleClick.bind(this)}>
                         <span className={btnClass}/>

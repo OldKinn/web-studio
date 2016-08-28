@@ -21,7 +21,8 @@ const rootRoute = {
                 component: require('./routes/Dashboard/Dashboard')
             },
             childRoutes: [
-                require('./routes/Home')
+                require('./routes/Home'),
+                require('./routes/Attribute')
             ]
         }
     ]
