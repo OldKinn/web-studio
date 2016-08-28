@@ -26,6 +26,7 @@
     "gulp-uglify": "^2.0.0",
     "rc-queue-anim": "^0.12.4",
     "react": "^15.3.0",
+    "react-custom-scrollbars": "^4.0.0",
     "react-dom": "^15.3.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.6.1",
@@ -46,7 +47,6 @@
     "express": "^4.14.0",
     "lodash": "^4.15.0",
     "morgan": "^1.7.0",
-    "react-custom-scrollbars": "^4.0.0",
     "serve-favicon": "~2.3.0"
   }
 }
