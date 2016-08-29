@@ -5,6 +5,7 @@
 
 import React, {Component} from 'react'
 import {Scrollbars} from 'react-custom-scrollbars'
+import MenuAvatar from './MenuAvatar'
 import MenuItem from './MenuItem'
 
 class Menu extends Component {
@@ -22,36 +23,25 @@ class Menu extends Component {
         const renderScrollbar = (props) => {
             return <span {...props} className="hidden"/>
         }
-        let {width, btnClass} = {
+        let {width, menuClass, btnClass} = {
             width: 220,
+            menuClass: 'frame-menu',
             btnClass: 'glyphicon glyphicon-menu-left'
         }
         if (cache.collapse) {
             width = 54;
+            menuClass += ' collapsed';
             btnClass = 'glyphicon glyphicon-menu-right';
         }
         return (
-            <div className="frame-menu" style={{width}}>
+            <div className={menuClass} style={{width}}>
                 <Scrollbars
                     autoHide={true}
                     autoHideTimeout={800}
                     autoHideDuration={200}
                     renderTrackHorizontal={renderScrollbar}
                 >
-                    <div className="menu-header">
-                        <button className="btn btn-sm">
-                            <i className="glyphicon glyphicon-cog"/>
-                        </button>
-                        <button className="btn btn-sm">
-                            <i className="glyphicon glyphicon-star"/>
-                        </button>
-                        <button className="btn btn-sm">
-                            <i className="glyphicon glyphicon-star"/>
-                        </button>
-                        <button className="btn btn-sm">
-                            <i className="glyphicon glyphicon-star"/>
-                        </button>
-                    </div>
+                    <MenuAvatar/>
                     <div className="menu-content">
                         {cache.menus.map(createMenu)}
                     </div>

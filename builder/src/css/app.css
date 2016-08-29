@@ -70,17 +70,18 @@
     height: 44px;
     color: #FFF;
     line-height: 44px;
-    padding-left: 55px;
+    padding-left: 65px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
 }
 
 .menu-item .menu-icon {
     position: absolute;
-    padding: 0 15px;
+    padding: 0 20px;
     left: 0;
     border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 .menu-item .menu-title a {
     color: #FFF;
     text-decoration: none;
@@ -88,12 +89,37 @@
 
 .frame-menu .menu-header {
     background-color: #89CC97;
-    padding: 10px 0 0 10px;
+    padding: 10px;
+    position: relative;
 }
 
-.menu-header .btn {
-    margin-right: 18px;
-    margin-bottom: 10px;
+.frame-menu .avatar {
+    width: 60px;
+    height: 60px;
+    transition: all 0.6s ease-in-out;
+}
+
+.frame-menu.collapsed .avatar {
+    width: 32px;
+    height: 32px;
+}
+
+.frame-menu .brief-info {
+    position: absolute;
+    left: 84px;
+    top: 12px;
+    width: 120px;
+    color: #ECEFF1;
+    transition: all 0.6s ease-in-out;
+}
+
+.frame-menu.collapsed .brief-info {
+    top: -51px;
+}
+
+.frame-menu .user-name {
+    font-size: 18px;
+    margin: 6px 0;
 }
 
 .frame-menu .menu-footer {

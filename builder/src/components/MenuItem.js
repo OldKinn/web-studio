@@ -9,20 +9,16 @@ import {Link} from 'react-router'
 class MenuItem extends Component {
     render() {
         const {name, path, icon, collapse} = this.props;
-        let {textClass, iconClass, style} = {
+        let {textClass, iconClass} = {
             textClass: 'menu-title text-truncate',
-            iconClass: 'glyphicon glyphicon-' + icon,
-            style: {
-                padding: '0 15px'
-            }
+            iconClass: 'glyphicon glyphicon-' + icon
         }
         if (collapse) {
             textClass += ' hidden';
-            style.padding = '0 20px';
         }
         return (
             <div className="menu-item">
-                <div className="menu-icon" style={style}>
+                <div className="menu-icon">
                     <span className={iconClass}/>
                 </div>
                 <div className={textClass}>

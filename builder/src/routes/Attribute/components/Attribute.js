@@ -23,7 +23,7 @@ class Attribute extends Component {
                     </Scrollbars>
                 </div>
                 <div className="layout-right">
-
+                    这是表格
                 </div>
             </div>
         )
