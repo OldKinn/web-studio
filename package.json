@@ -7,7 +7,7 @@
     "build:webpack": "cross-env NODE_ENV=production webpack --config ./builder/webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "react": "node ./builder/devServer.js",
-    "start": "cross-env DEBUG=web-studio:* && node ./bin/www"
+    "start": "set DEBUG=web-studio:* & node ./bin/www"
   },
   "devDependencies": {
     "async": "^2.0.1",
