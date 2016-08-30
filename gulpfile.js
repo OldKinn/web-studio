@@ -7,12 +7,24 @@
 var path = require('path');
 var gulp = require('gulp');
 var rimraf = require('rimraf');
+var models = require('./models');
 
+// 数据库初始任务
+gulp.task('database', function (callback) {
+    models.sequelize.sync({force: true}).then(function () {
+        console.log('数据库初始完毕...');
+        models.sequelize.close();
+        callback();
+    });
+});
+
+// 清空静态资源
 gulp.task('clean:static', function (callback) {
     rimraf('./public/', callback);
 });
 
-gulp.task('clean', ['clean:static'], function() {
+// 全局清空任务
+gulp.task('clean', ['clean:static'], function () {
     console.log('执行清空任务完毕');
 });
 
@@ -28,6 +40,6 @@ gulp.task('copy:react', function () {
         .pipe(gulp.dest('./public/app'));
 });
 
-gulp.task('copy', ['copy:static', 'copy:react'], function() {
+gulp.task('copy', ['copy:static', 'copy:react'], function () {
     console.log('复制任务执行完毕');
 });
