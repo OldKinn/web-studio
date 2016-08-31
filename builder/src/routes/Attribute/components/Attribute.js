@@ -14,7 +14,10 @@ class Attribute extends Component {
             <div>
                 <GroupList cache={cache}/>
                 <div className="pull-left">
-                    这是表格
+                    <div>属性</div>
+                    <div className="btn-group">
+                        <button className="btn">新增</button>
+                    </div>
                 </div>
             </div>
         )

@@ -3,3 +3,30 @@
     width: 200px;
     background-color: #E0E0E0;
 }
+
+.title-bar {
+    border-left: 10px solid #4CC0C1;
+    background-color: #41586E;
+    color: #FFFFFF;
+    margin: 10px;
+    border-radius: 3px 25px 25px 3px;
+    position: relative;
+}
+
+.title-bar .title {
+    display: inline-block;
+    line-height: 50px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.title-bar .btn-circle {
+    right: -2px;
+    top: 0;
+    position: absolute;
+}
+
+.attribute-group {
+    margin: 0 10px;
+}
