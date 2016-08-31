@@ -5,24 +5,15 @@
  */
 
 import React, {Component} from 'react'
-import {Scrollbars} from 'react-custom-scrollbars'
+import GroupList from './GroupList'
 
 class Attribute extends Component {
     render() {
         const {cache} = this.props;
         return (
             <div>
+                <GroupList cache={cache}/>
                 <div className="pull-left">
-                    <Scrollbars
-                        style={{height: cache.windowHeight - 50, width: 300, backgroundColor: '#E0E0E0'}}
-                        autoHide={true}
-                        autoHideTimeout={800}
-                        autoHideDuration={200}
-                    >
-                        <h3>属性分组</h3>
-                    </Scrollbars>
-                </div>
-                <div className="layout-right">
                     这是表格
                 </div>
             </div>
