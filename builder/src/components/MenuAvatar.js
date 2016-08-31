@@ -14,7 +14,7 @@ class MenuAvatar extends Component {
                 </div>
                 <div className="brief-info">
                     <h3 className="user-name">LEON</h3>
-                    <p className="margin-none">项目经理</p>
+                    <p className="margin-none">码农帮帮主</p>
                 </div>
             </div>
         )

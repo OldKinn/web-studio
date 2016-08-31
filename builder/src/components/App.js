@@ -31,7 +31,7 @@ class App extends Component {
         const {actions, cache, children} = this.props;
         return (
             <div className="root-container">
-                <Header title="Web Studio 编辑器管理" logo="public/images/logo.png"/>
+                <Header title="Web Studio" logo="public/images/logo.png"/>
                 <Menu actions={actions} cache={cache}/>
                 <Content cache={cache}>
                     {React.cloneElement(children, {cache: cache})}
