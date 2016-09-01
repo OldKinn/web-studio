@@ -36,6 +36,7 @@ class Attribute extends Component {
                     Alert.error('保存失败！');
                     return false;
                 }
+                this.setState({name: ''});
                 actions.setCache('dialog', false);
                 Alert.success('保存成功！');
             }

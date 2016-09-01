@@ -17,14 +17,10 @@ class MenuItem extends Component {
             textClass += ' hidden';
         }
         return (
-            <div className="menu-item">
-                <div className="menu-icon">
-                    <span className={iconClass}/>
-                </div>
-                <div className={textClass}>
-                    <Link to={path}>{name}</Link>
-                </div>
-            </div>
+            <Link to={path} className="menu-item" draggable={false}>
+                <span className={iconClass}/>
+                <span className={textClass}>{name}</span>
+            </Link>
         )
     }
 }

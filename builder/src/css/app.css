@@ -65,6 +65,7 @@ body {
     padding-bottom: 50px;
     -webkit-user-select: none;
     user-select: none;
+    -webkit-user-drag: none;
     transition: all 0.6s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.5) 2px 0 5px;
     z-index: 10;
@@ -74,9 +75,23 @@ body {
     height: 44px;
     color: #FFF;
     line-height: 44px;
-    padding-left: 65px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.frame-menu .menu-item .glyphicon {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.frame-menu .menu-item .menu-title {
+    position: absolute;
+    left: 50px;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    padding-left: 10px;
 }
 
 .menu-item .menu-icon {
@@ -94,7 +109,6 @@ body {
 .frame-menu .menu-header {
     background-color: #89CC97;
     padding: 10px;
-    position: relative;
 }
 
 .frame-menu .avatar {
@@ -156,6 +170,11 @@ body {
     font-weight: 500;
 }
 
-.rc-dialog-close:focus {
+.app-dialog .rc-dialog-close:focus {
     outline: 0;
+}
+
+label {
+    font-weight: 500;
+    font-size: 16px;
 }
