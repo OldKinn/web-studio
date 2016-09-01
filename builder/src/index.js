@@ -1,5 +1,6 @@
 import 'react-s-alert/dist/s-alert-default.css'
 import 'react-s-alert/dist/s-alert-css-effects/stackslide.css'
+import 'rc-dialog/assets/index.css'
 import './css/app.css'
 import './css/helper.css'
 import './css/attribute.css'

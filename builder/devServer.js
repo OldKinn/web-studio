@@ -13,10 +13,18 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.use('/public', express.static(path.join(__dirname,'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.json({success: true});
+});
+
+app.post('*', function (req, res) {
+    res.json({success: true});
 });
 
 app.listen(2016, function (err) {

@@ -150,3 +150,12 @@ body {
     overflow-y: auto;
     transition: all 0.6s ease-in-out;
 }
+
+.app-dialog .rc-dialog-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.rc-dialog-close:focus {
+    outline: 0;
+}
