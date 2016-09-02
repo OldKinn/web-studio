@@ -19,6 +19,11 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/attribute/group/list', function (req, res) {
+    var text = '{"output":[{"id":1,"name":"QQQ","enable":null,"createdAt":"2016-09-01T14:13:25.481Z","updatedAt":"2016-09-01T14:13:25.481Z"},{"id":2,"name":"我的测试","enable":null,"createdAt":"2016-09-01T15:08:05.192Z","updatedAt":"2016-09-01T15:08:05.192Z"}],"success":true,"message":""}';
+    res.send(text);
+});
+
 app.get('*', function (req, res) {
     res.json({success: true});
 });

@@ -161,8 +161,13 @@ body {
     right: 0;
     top: 50px;
     bottom: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
     transition: all 0.6s ease-in-out;
+}
+
+.container-fluid {
+    min-width: 720px;
+    overflow: auto;
 }
 
 .app-dialog .rc-dialog-title {

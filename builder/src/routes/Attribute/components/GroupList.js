@@ -58,25 +58,18 @@ class GroupList extends Component {
             }
         }
         return (
-
-            <Scrollbars
-                style={style}
-                autoHide={true}
-                autoHideTimeout={800}
-                autoHideDuration={200}
-            >
+            <Scrollbars style={style} autoHide={true} autoHideTimeout={800} autoHideDuration={200}>
                 <div className="title-bar">
                     <h3 className="title margin-none">属性分组</h3>
                     <button className="btn-circle" onClick={() => {actions.setCache('dialog', true)}}>
                         <span className="glyphicon glyphicon-plus"/>
                     </button>
                 </div>
-                <div className="list-group attribute-group">
+                <div className="list-group attribute-group padding-bottom">
                     {this.state.groups.map(createItem)}
                     {createBlank()}
                 </div>
             </Scrollbars>
-
         )
     }
 }

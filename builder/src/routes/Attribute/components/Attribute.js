@@ -8,6 +8,7 @@ import React, {Component} from 'react'
 import Dialog from 'rc-dialog'
 import Alert from 'react-s-alert'
 import GroupList from './GroupList'
+import AttributeList from './AttributeList'
 
 class Attribute extends Component {
 
@@ -52,14 +53,11 @@ class Attribute extends Component {
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-xs-4 padding-none bg-gray">
+                    <div className="col-xs-3 padding-none bg-gray">
                         <GroupList cache={cache} actions={actions}/>
                     </div>
-                    <div className="col-xs-8">
-                        <div>属性</div>
-                        <div className="btn-group">
-                            <button className="btn">新增</button>
-                        </div>
+                    <div className="col-xs-9">
+                        <AttributeList cache={cache} actions={actions}/>
                     </div>
                 </div>
                 <Dialog
