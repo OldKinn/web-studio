@@ -6,6 +6,7 @@
 
 import React, {Component} from 'react'
 import {Scrollbars} from 'react-custom-scrollbars'
+import {Link} from 'react-router'
 import get from 'lodash/get'
 
 class GroupList extends Component {
@@ -40,12 +41,12 @@ class GroupList extends Component {
         }
         const createItem = (item, index) => {
             return (
-                <div key={index} className="list-group-item">
+                <Link to={{pathname: '/attribute/list/' + item.id}} activeClassName="active" key={index} className="list-group-item">
                     <span>{item.name}</span>
                     <button className="btn btn-xs pull-right">
                         <span className="glyphicon glyphicon-option-vertical"/>
                     </button>
-                </div>
+                </Link>
             )
         }
         const createBlank = () => {

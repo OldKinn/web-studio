@@ -8,7 +8,6 @@ import React, {Component} from 'react'
 import Dialog from 'rc-dialog'
 import Alert from 'react-s-alert'
 import GroupList from './GroupList'
-import AttributeList from './AttributeList'
 
 class Attribute extends Component {
 
@@ -57,7 +56,10 @@ class Attribute extends Component {
                         <GroupList cache={cache} actions={actions}/>
                     </div>
                     <div className="col-xs-9">
-                        <AttributeList cache={cache} actions={actions}/>
+                        {this.props.children && React.cloneElement(this.props.children, {
+                            cache: cache,
+                            actions: actions
+                        })}
                     </div>
                 </div>
                 <Dialog

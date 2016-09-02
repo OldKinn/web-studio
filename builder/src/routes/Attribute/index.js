@@ -4,10 +4,17 @@
  */
 
 module.exports = {
-    path: '/attribute',
+    path: 'attribute',
     getComponent(nextState, cb) {
         require.ensure([], (require) => {
             cb(null, require('./components/Attribute'))
+        })
+    },
+    getChildRoutes(partialNextState, cb) {
+        require.ensure([], (require) => {
+            cb(null, [
+                require('./routes/Attribute')
+            ])
         })
     }
 }

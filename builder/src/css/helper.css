@@ -64,3 +64,7 @@
 .bg-gray {
     background-color: #F5F5F5;
 }
+
+.dashed {
+    border-style: dashed;
+}
